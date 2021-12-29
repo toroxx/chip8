@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/define.js"></script>
+    <script src="js/chip8.js"></script>
+    <script src="js/inst.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/control.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="main.js"></script>
+
+    <style>
+        .display {
+            --w-px: 64;
+            --h-px: 32;
+            background-color: #000;
+            border: 5px solid #999;
+            --px-width: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(var(--px-width)*var(--w-px));
+            height: calc(var(--px-width)*var(--h-px));
+        }
+
+        .display .px {
+            width: var(--px-width);
+            height: var(--px-width);
+            background-color: #000;
+        }
+
+        .display .px.on {
+            background-color: #0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="rom_loader">
+        <input type="file" name="read_file" />
+        <button type="button" name="read">Load</button>
+    </form> <br />
+    <div class="console">
+        Console: <br />
+        R: <span class="r"></span><br />
+        s: <span class="s"></span><br />
+        i: <span class="i"></span>,
+        st: <span class="st"></span>,
+        dt: <span class="dt"></span>,
+        pc: <span class="pc"></span>,
+        sp: <span class="sp"></span>
+    </div>
+    <br />
+    <div class="display"></div>
+    <!--<canvas class="display"></canvas>-->
+</body>
+
+</html>
