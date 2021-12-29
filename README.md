@@ -1,6 +1,9 @@
 # chip8
 chip8 emulator written in vanilla js. 
 
+## Demo
+https://toroxx.github.io/chip8/
+
 ## How to run.
 - Copy all files to http server.
 - or use run.bat to start the php dev server. (note: php is not required in the project)
